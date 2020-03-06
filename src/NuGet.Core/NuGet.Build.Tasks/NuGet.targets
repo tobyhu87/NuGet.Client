@@ -646,7 +646,7 @@ Copyright (c) .NET Foundation. All rights reserved.
 
     <!-- Determine the restore output path -->
     <PropertyGroup Condition=" '$(PackageReferenceCompatibleProjectStyle)' == 'true' OR '$(RestoreProjectStyle)' == 'ProjectJson' ">
-      <RestoreOutputPath Condition=" '$(RestoreOutputPath)' == '' ">$(MSBuildProjectExtensionsPath)</RestoreOutputPath>
+      <RestoreOutputPath>$(MSBuildProjectExtensionsPath)</RestoreOutputPath>
     </PropertyGroup>
 
     <ConvertToAbsolutePath Paths="$(RestoreOutputPath)" Condition=" '$(PackageReferenceCompatibleProjectStyle)' == 'true' OR '$(RestoreProjectStyle)' == 'ProjectJson'">
