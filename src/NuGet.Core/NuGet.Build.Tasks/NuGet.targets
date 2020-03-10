@@ -52,7 +52,7 @@ Copyright (c) .NET Foundation. All rights reserved.
     <RestoreBuildInParallel Condition=" '$(BuildInParallel)' != '' ">$(BuildInParallel)</RestoreBuildInParallel>
     <RestoreBuildInParallel Condition=" '$(RestoreBuildInParallel)' == '' ">true</RestoreBuildInParallel>
     <!-- Check if the restore target was executed on a sln file -->
-    <_RestoreSolutionFileUsed Condition=" '$(_RestoreSolutionFileUsed)' == '' AND '$(SolutionDir)' != '' AND $(MSBuildProjectFullPath.EndsWith('.metaproj')) == 'true' ">true</_RestoreSolutionFileUsed>
+    <_RestoreSolutionFileUsed Condition=" '$(_RestoreSolutionFileUsed)' == '' AND '$(SolutionDir)' != '' AND $(MSBuildProjectFullPath.EndsWith('.metaproj')) == 'true' " >true</_RestoreSolutionFileUsed>
     <!-- We default to MSBuildInteractive. -->
     <NuGetInteractive Condition=" '$(NuGetInteractive)' == '' ">$(MSBuildInteractive)</NuGetInteractive>
     <!-- Mark that this targets file supports package download. -->
@@ -180,7 +180,7 @@ Copyright (c) .NET Foundation. All rights reserved.
     ============================================================
   -->
   <Target Name="CollectCentralPackageVersions" Returns="@(PackageVersion)" />
-
+  
   <!--
     ============================================================
     CollectPackageDownloads

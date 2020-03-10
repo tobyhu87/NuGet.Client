@@ -643,7 +643,7 @@ namespace Dotnet.Integration.Test
                     var packagesA = dependencyGroups[0].Packages.ToList();
                     Assert.Equal(1,
                         packagesA.Count);
-
+      
                     Assert.Equal("ClassLibrary2", packagesA[0].Id);
                     Assert.Equal(new VersionRange(new NuGetVersion("1.0.0")), packagesA[0].VersionRange);
                     Assert.Equal(new List<string> {"Analyzers", "Build"}, packagesA[0].Exclude);
@@ -979,7 +979,7 @@ namespace Dotnet.Integration.Test
                 }
 
                 msbuildFixture.RestoreProject(workingDirectory, projectName, string.Empty);
-
+                
                 msbuildFixture.PackProject(workingDirectory, projectName,
                     $"-o {workingDirectory} /p:NuspecFile=");
 
@@ -1122,7 +1122,7 @@ namespace Dotnet.Integration.Test
                 File.WriteAllText(Path.Combine(workingDirectory, "input.nuspec"), nuspecFileContent);
 
                 msbuildFixture.PackProject(
-                    workingDirectory,
+                    workingDirectory, 
                     projectName,
                     $"-o {workingDirectory} /p:NuspecFile=input.nuspec /p:OutputFileNamesWithoutVersion=true /p:InstallPackageToOutputPath=true");
 
@@ -1374,7 +1374,7 @@ namespace Dotnet.Integration.Test
                 {
                     pathToContent = Path.Combine(workingDirectory, sourcePath);
                 }
-
+                
                 File.WriteAllText(pathToContent, "this is sample text in the content file");
 
                 msbuildFixture.RestoreProject(workingDirectory, projectName, string.Empty);
@@ -1825,7 +1825,7 @@ namespace Dotnet.Integration.Test
                     var xml = XDocument.Load(stream);
 
                     var attributes = new Dictionary<string, string>();
-
+                    
                     attributes["Version"] = "9.0.1";
                     ProjectFileUtils.AddItem(
                         xml,
@@ -2270,7 +2270,7 @@ namespace ClassLibrary
       </TfmSpecificPackageFile>
       <TfmSpecificPackageFile Include=""Extensions/**/ext.cs.txt"" Condition=""'$(TargetFramework)' == 'net46'"">
         <PackagePath>net46content</PackagePath>
-      </TfmSpecificPackageFile>
+      </TfmSpecificPackageFile>  
     </ItemGroup>
   </Target>";
                     ProjectFileUtils.SetTargetFrameworkForProject(xml, tfmProperty, tfmValue);
@@ -2414,7 +2414,7 @@ namespace ClassLibrary
             {
                 var projectName = "ClassLibrary1";
                 var workingDirectory = Path.Combine(testDirectory, projectName);
-
+                
                 // Create the subdirectory structure for testing possible source paths for the content file
                 Directory.CreateDirectory(Path.Combine(workingDirectory, "folderA", "folderB"));
                 var projectFile = Path.Combine(workingDirectory, $"{projectName}.csproj");
@@ -2485,7 +2485,7 @@ namespace ClassLibrary
             {
                 var projectName = "ClassLibrary1";
                 var workingDirectory = Path.Combine(testDirectory, projectName);
-
+                
                 // Create the subdirectory structure for testing possible source paths for the content file
                 var projectFile = Path.Combine(workingDirectory, $"{projectName}.csproj");
 
@@ -2545,8 +2545,8 @@ namespace ClassLibrary
                         {
                             Assert.Null(frameworkSpecificGroup);
                         }
-
-                    }
+                        
+                    }                    
                 }
             }
         }
@@ -2576,7 +2576,7 @@ namespace ClassLibrary
                 using (var stream = new FileStream(projectFile, FileMode.Open, FileAccess.ReadWrite))
                 {
                     var xml = XDocument.Load(stream);
-
+                    
                     var attributes = new Dictionary<string, string>();
                     attributes["Pack"] = "true";
                     var properties = new Dictionary<string, string>();
@@ -2769,10 +2769,10 @@ namespace ClassLibrary
                 Assert.True(File.Exists(nupkgPath), "The output .nupkg is not in the expected place");
                 Assert.True(File.Exists(nuspecPath), "The intermediate nuspec file is not in the expected place");
                 Assert.True(indexOfHelloWorld < indexOfPackSuccessful, "The custom target RunBeforePack did not run before pack target.");
-
+                
             }
         }
-
+        
         [PlatformTheory(Platform.Windows)]
         [InlineData("TargetFramework", "netstandard1.4")]
         [InlineData("TargetFrameworks", "netstandard1.4;net46")]
@@ -3267,7 +3267,7 @@ namespace ClassLibrary
                     {
                         ProjectFileUtils.AddProperty(xml, "SuppressDependenciesWhenPacking", "true");
                     }
-
+                    
                     var attributes = new Dictionary<string, string>();
 
                     attributes["Version"] = "9.0.1";
@@ -3819,7 +3819,7 @@ namespace ClassLibrary
 
                 using (var nupkgReader = new PackageArchiveReader(nupkgPath))
                 using (var symbolReader = new PackageArchiveReader(symbolPath))
-                {
+                {   
                     // Validate the assets.
                     Assert.False(symbolReader.NuspecReader.GetRequireLicenseAcceptance());
                     Assert.Null(symbolReader.NuspecReader.GetLicenseMetadata());
@@ -3982,7 +3982,7 @@ namespace ClassLibrary
 
                 using (var nupkgReader = new PackageArchiveReader(nupkgPath))
                 {
-                    // Validate Compile assets
+                    // Validate Compile assets 
                     foreach (var buildTargetFolder in buildTargetFolders.Split(';'))
                     {
                         var compileItems = nupkgReader.GetFiles(buildTargetFolder).ToList();
@@ -4201,7 +4201,7 @@ namespace ClassLibrary
 
                 // Validate that other content is also included
                 var nupkgPath = Path.Combine(projectBuilder.ProjectFolder, "bin", "Debug", $"{projectBuilder.ProjectName}.1.0.0.nupkg");
-                using (var nupkgReader = new PackageArchiveReader(nupkgPath))
+                using (var nupkgReader = new PackageArchiveReader(nupkgPath)) 
                 {
                     Assert.NotNull(nupkgReader.GetEntry("content/other/files.txt"));
                     Assert.NotNull(nupkgReader.GetEntry("utils/sources.txt"));
@@ -4250,8 +4250,8 @@ namespace ClassLibrary
             {
                 projectBuilder.Build(msbuildFixture, srcDir.Path);
                 var result = msbuildFixture.PackProject(
-                    projectBuilder.ProjectFolder,
-                    projectBuilder.ProjectName,
+                    projectBuilder.ProjectFolder, 
+                    projectBuilder.ProjectName, 
                     $"--include-symbols /p:SymbolPackageFormat={symbolPackageFormat}");
             }
         }
