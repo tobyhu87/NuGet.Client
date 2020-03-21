@@ -1,5 +1,5 @@
 ---
-date-generated: 2020-03-18T19:04:56
+date-generated: 2020-03-21T15:57:01
 tool: NuGetTasks.GenerateMarkdownDoc
 ---
 
@@ -54,26 +54,11 @@ tool: NuGetTasks.GenerateMarkdownDoc
 ## Test Projects
 
 
-- [`test\NuGet.Clients.FuncTests\NuGet.CommandLine.FuncTest\NuGet.CommandLine.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/NuGet.CommandLine.FuncTest.csproj): 
-- [`test\NuGet.Clients.FuncTests\NuGet.MSSigning.Extensions.FuncTest\NuGet.MSSigning.Extensions.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.FuncTests/NuGet.MSSigning.Extensions.FuncTest/NuGet.MSSigning.Extensions.FuncTest.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.CommandLine.Test\NuGet.CommandLine.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGet.CommandLine.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.MSSigning.Extensions.Test\NuGet.MSSigning.Extensions.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.MSSigning.Extensions.Test/NuGet.MSSigning.Extensions.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.PackageManagement.UI.Test\NuGet.PackageManagement.UI.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.PackageManagement.UI.Test/NuGet.PackageManagement.UI.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.PackageManagement.VisualStudio.Test\NuGet.PackageManagement.VisualStudio.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.PackageManagement.VisualStudio.Test/NuGet.PackageManagement.VisualStudio.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.SolutionRestoreManager.Test\NuGet.SolutionRestoreManager.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.SolutionRestoreManager.Test/NuGet.SolutionRestoreManager.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.Tools.Test\NuGet.Tools.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.Tools.Test/NuGet.Tools.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.VisualStudio.Common.Test\NuGet.VisualStudio.Common.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.VisualStudio.Common.Test/NuGet.VisualStudio.Common.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.VisualStudio.Implementation.Test\NuGet.VisualStudio.Implementation.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.VisualStudio.Implementation.Test/NuGet.VisualStudio.Implementation.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGet.VisualStudio.Test\NuGet.VisualStudio.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.VisualStudio.Test/NuGet.VisualStudio.Test.csproj): 
-- [`test\NuGet.Clients.Tests\NuGetConsole.Host.PowerShell.Test\NuGetConsole.Host.PowerShell.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGetConsole.Host.PowerShell.Test/NuGetConsole.Host.PowerShell.Test.csproj): 
-- [`test\NuGet.Core.FuncTests\Dotnet.Integration.Test\Dotnet.Integration.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/Dotnet.Integration.Test/Dotnet.Integration.Test.csproj): 
-- [`test\NuGet.Core.FuncTests\Msbuild.Integration.Test\Msbuild.Integration.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/Msbuild.Integration.Test/Msbuild.Integration.Test.csproj): 
-- [`test\NuGet.Core.FuncTests\NuGet.Commands.FuncTest\NuGet.Commands.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Commands.FuncTest/NuGet.Commands.FuncTest.csproj): 
-- [`test\NuGet.Core.FuncTests\NuGet.Common.FuncTest\NuGet.Common.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Common.FuncTest/NuGet.Common.FuncTest.csproj): 
-- [`test\NuGet.Core.FuncTests\NuGet.Core.FuncTest\NuGet.Core.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Core.FuncTest/NuGet.Core.FuncTest.csproj): 
-- [`test\NuGet.Core.FuncTests\NuGet.Packaging.FuncTest\NuGet.Packaging.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Packaging.FuncTest/NuGet.Packaging.FuncTest.csproj): 
-- [`test\NuGet.Core.FuncTests\NuGet.Protocol.FuncTest\NuGet.Protocol.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Protocol.FuncTest/NuGet.Protocol.FuncTest.csproj): 
-- [`test\NuGet.Core.FuncTests\NuGet.XPlat.FuncTest\NuGet.XPlat.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.XPlat.FuncTest/NuGet.XPlat.FuncTest.csproj): 
+
+
+### Core Unit Test Projects
+
+
 - [`test\NuGet.Core.Tests\Microsoft.Build.NuGetSdkResolver.Tests\Microsoft.Build.NuGetSdkResolver.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/Microsoft.Build.NuGetSdkResolver.Tests/Microsoft.Build.NuGetSdkResolver.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Build.Tasks.Console.Test\NuGet.Build.Tasks.Console.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Build.Tasks.Console.Test/NuGet.Build.Tasks.Console.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Build.Tasks.Pack.Test\NuGet.Build.Tasks.Pack.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Build.Tasks.Pack.Test/NuGet.Build.Tasks.Pack.Test.csproj): 
@@ -87,10 +72,40 @@ tool: NuGetTasks.GenerateMarkdownDoc
 - [`test\NuGet.Core.Tests\NuGet.Frameworks.Test\NuGet.Frameworks.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Frameworks.Test/NuGet.Frameworks.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Indexing.Test\NuGet.Indexing.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Indexing.Test/NuGet.Indexing.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.LibraryModel.Tests\NuGet.LibraryModel.Tests.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.LibraryModel.Tests/NuGet.LibraryModel.Tests.csproj): 
-- [`test\NuGet.Core.Tests\NuGet.PackageManagement.Test\NuGet.PackageManagement.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.PackageManagement.Test/NuGet.PackageManagement.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Packaging.Test\NuGet.Packaging.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Packaging.Test/NuGet.Packaging.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.ProjectModel.Test\NuGet.ProjectModel.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.ProjectModel.Test/NuGet.ProjectModel.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Protocol.Tests\NuGet.Protocol.Tests.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Protocol.Tests/NuGet.Protocol.Tests.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Resolver.Test\NuGet.Resolver.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Resolver.Test/NuGet.Resolver.Test.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Shared.Tests\NuGet.Shared.Tests.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Shared.Tests/NuGet.Shared.Tests.csproj): 
 - [`test\NuGet.Core.Tests\NuGet.Versioning.Test\NuGet.Versioning.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.Versioning.Test/NuGet.Versioning.Test.csproj): 
+
+
+### Core Function Test Projects
+
+
+- [`test\NuGet.Clients.FuncTests\NuGet.CommandLine.FuncTest\NuGet.CommandLine.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.FuncTests/NuGet.CommandLine.FuncTest/NuGet.CommandLine.FuncTest.csproj): 
+- [`test\NuGet.Clients.FuncTests\NuGet.MSSigning.Extensions.FuncTest\NuGet.MSSigning.Extensions.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.FuncTests/NuGet.MSSigning.Extensions.FuncTest/NuGet.MSSigning.Extensions.FuncTest.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.CommandLine.Test\NuGet.CommandLine.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.CommandLine.Test/NuGet.CommandLine.Test.csproj): 
+- [`test\NuGet.Core.FuncTests\Dotnet.Integration.Test\Dotnet.Integration.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/Dotnet.Integration.Test/Dotnet.Integration.Test.csproj): 
+- [`test\NuGet.Core.FuncTests\Msbuild.Integration.Test\Msbuild.Integration.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/Msbuild.Integration.Test/Msbuild.Integration.Test.csproj): 
+- [`test\NuGet.Core.FuncTests\NuGet.Commands.FuncTest\NuGet.Commands.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Commands.FuncTest/NuGet.Commands.FuncTest.csproj): 
+- [`test\NuGet.Core.FuncTests\NuGet.Common.FuncTest\NuGet.Common.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Common.FuncTest/NuGet.Common.FuncTest.csproj): 
+- [`test\NuGet.Core.FuncTests\NuGet.Core.FuncTest\NuGet.Core.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Core.FuncTest/NuGet.Core.FuncTest.csproj): 
+- [`test\NuGet.Core.FuncTests\NuGet.Packaging.FuncTest\NuGet.Packaging.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Packaging.FuncTest/NuGet.Packaging.FuncTest.csproj): 
+- [`test\NuGet.Core.FuncTests\NuGet.Protocol.FuncTest\NuGet.Protocol.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.Protocol.FuncTest/NuGet.Protocol.FuncTest.csproj): 
+- [`test\NuGet.Core.FuncTests\NuGet.XPlat.FuncTest\NuGet.XPlat.FuncTest.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.FuncTests/NuGet.XPlat.FuncTest/NuGet.XPlat.FuncTest.csproj): 
+- [`test\NuGet.Core.Tests\NuGet.PackageManagement.Test\NuGet.PackageManagement.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Core.Tests/NuGet.PackageManagement.Test/NuGet.PackageManagement.Test.csproj): 
+
+
+### VS Unit Test Projects
+
+
+- [`test\NuGet.Clients.Tests\NuGet.MSSigning.Extensions.Test\NuGet.MSSigning.Extensions.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.MSSigning.Extensions.Test/NuGet.MSSigning.Extensions.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.PackageManagement.UI.Test\NuGet.PackageManagement.UI.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.PackageManagement.UI.Test/NuGet.PackageManagement.UI.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.PackageManagement.VisualStudio.Test\NuGet.PackageManagement.VisualStudio.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.PackageManagement.VisualStudio.Test/NuGet.PackageManagement.VisualStudio.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.SolutionRestoreManager.Test\NuGet.SolutionRestoreManager.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.SolutionRestoreManager.Test/NuGet.SolutionRestoreManager.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.Tools.Test\NuGet.Tools.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.Tools.Test/NuGet.Tools.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.VisualStudio.Common.Test\NuGet.VisualStudio.Common.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.VisualStudio.Common.Test/NuGet.VisualStudio.Common.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.VisualStudio.Implementation.Test\NuGet.VisualStudio.Implementation.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.VisualStudio.Implementation.Test/NuGet.VisualStudio.Implementation.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGet.VisualStudio.Test\NuGet.VisualStudio.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGet.VisualStudio.Test/NuGet.VisualStudio.Test.csproj): 
+- [`test\NuGet.Clients.Tests\NuGetConsole.Host.PowerShell.Test\NuGetConsole.Host.PowerShell.Test.csproj`](https://github.com/NuGet/NuGet.Client/tree/dev/test/NuGet.Clients.Tests/NuGetConsole.Host.PowerShell.Test/NuGetConsole.Host.PowerShell.Test.csproj): 

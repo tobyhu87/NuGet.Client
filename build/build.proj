@@ -438,7 +438,9 @@
 
     <GenerateMarkdownDoc
       ProductProjects="@(ProductProjects)"
-      TestProjects="@(CoreUnitTestProjects);@(CoreFuncTestProjects);@(VSUnitTestProjects)"
+      CoreUnitTestProjects="@(CoreUnitTestProjects)"
+      CoreFuncTestProjects="@(CoreFuncTestProjects)"
+      VSUnitTestProjects="@(VSUnitTestProjects)"
       OutputFile="$(RepositoryRootDirectory)\docs\project-list.md"
       GitHubRepositoryUrl="$(RepositoryUrl)"
       RepositoryRoot="$(RepositoryRootDirectory)"

@@ -19,7 +19,12 @@ namespace NuGetTasks
         /// <summary>
         /// Test project files item group
         /// </summary>
-        public ITaskItem[] TestProjects { get; set; }
+        //public ITaskItem[] TestProjects { get; set; }
+        public ITaskItem[] CoreUnitTestProjects {get; set;}
+
+        public ITaskItem[] CoreFuncTestProjects {get; set;}
+
+        public ITaskItem[] VSUnitTestProjects {get; set;}
         /// <summary>
         /// Filepath to the generated documentation
         /// </summary>
@@ -44,6 +49,9 @@ namespace NuGetTasks
         /// Sub-title for test projects list
         /// </summary>
         public string TestProjectsSubtitle { get; set; } = "Test Projects";
+        public string CoreUnitTestProjectsSubtitle { get; set; } = "Core Unit Test Projects";
+        public string CoreFuncTestProjectsSubtitleSubtitle { get; set; } = "Core Function Test Projects";
+        public string VSUnitTestProjectsSubtitle { get; set; } = "VS Unit Test Projects";
         /// <summary>
         /// FullPath MSBuild item metadata
         /// </summary>
@@ -71,7 +79,13 @@ namespace NuGetTasks
                 SortAndWriteDescriptions(ProductProjects, file);
 
                 file.WriteLine($"\n\n## {TestProjectsSubtitle}\n\n");
-                SortAndWriteDescriptions(TestProjects, file);
+                file.WriteLine($"\n\n### {CoreUnitTestProjectsSubtitle}\n\n");
+                SortAndWriteDescriptions(CoreUnitTestProjects, file);
+                file.WriteLine($"\n\n### {CoreFuncTestProjectsSubtitleSubtitle}\n\n");
+                SortAndWriteDescriptions(CoreFuncTestProjects, file);
+                file.WriteLine($"\n\n### {VSUnitTestProjectsSubtitle}\n\n");
+                SortAndWriteDescriptions(VSUnitTestProjects, file);
+
             }
             Log.LogMessage(MessageImportance.Low, "Documentation complete");
 
