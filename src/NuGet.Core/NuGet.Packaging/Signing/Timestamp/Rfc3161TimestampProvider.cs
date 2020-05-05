@@ -208,7 +208,9 @@ namespace NuGet.Packaging.Signing
         {
             if (!nonce.SequenceEqual(timestampToken.TokenInfo.GetNonce()))
             {
-                throw new TimestampException(NuGetLogCode.NU3026, Strings.TimestampFailureNonceMismatch);
+                string nounce1 = BitConverter.ToString(nonce);
+                string nounce2 = BitConverter.ToString(timestampToken.TokenInfo.GetNonce());
+                throw new TimestampException(NuGetLogCode.NU3026, Strings.TimestampFailureNonceMismatch+" " + nounce1 + " " + nounce2);
             }
 
             if (!timestampToken.TokenInfo.HasMessageHash(messageHash))
