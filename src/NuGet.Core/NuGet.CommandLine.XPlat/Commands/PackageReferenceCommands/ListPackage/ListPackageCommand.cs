@@ -85,6 +85,11 @@ namespace NuGet.CommandLine.XPlat
                     Strings.NuGetXplatCommand_Interactive,
                     CommandOptionType.NoValue);
 
+                var verbosity = listpkg.Option(
+                    XPlatUtility.VerbosityOption,
+                    Strings.Switch_Verbosity,
+                    CommandOptionType.SingleValue);
+
                 listpkg.OnExecute(async () =>
                 {
                     var logger = getLogger();
@@ -96,6 +101,8 @@ namespace NuGet.CommandLine.XPlat
 
                     VerifyValidFrameworks(framework);
 
+                    var logLevel = XPlatUtility.GetLogLevel(verbosity);
+
                     var packageRefArgs = new ListPackageArgs(
                         path.Value,
                         packageSources,
@@ -106,8 +113,9 @@ namespace NuGet.CommandLine.XPlat
                         prerelease.HasValue(),
                         highestPatch.HasValue(),
                         highestMinor.HasValue(),
-                        logger,
-                        CancellationToken.None);
+                        showProtocolLogs: logLevel <= LogLevel.Verbose,
+                        logger: logger,
+                        cancellationToken: CancellationToken.None);
 
                     if (includeOutdated.HasValue() && includeDeprecated.HasValue())
                     {

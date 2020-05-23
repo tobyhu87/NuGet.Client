@@ -1,4 +1,4 @@
-﻿// Copyright (c) .NET Foundation. All rights reserved.
+// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
@@ -26,6 +26,17 @@ namespace NuGet.CommandLine.XPlat
                 Directory.GetCurrentDirectory(),
                 configFileName: null,
                 machineWideSettings: new XPlatMachineWideSetting());
+        }
+
+        public static LogLevel GetLogLevel(CommandOption verbosity)
+        {
+            LogLevel level;
+            if (!Enum.TryParse(value: verbosity.Value(), ignoreCase: true, result: out level))
+            {
+                level = LogLevel.Information;
+            }
+
+            return level;
         }
 
         public static void ConfigureProtocol()
