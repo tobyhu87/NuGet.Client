@@ -844,6 +844,15 @@ namespace NuGet.CommandLine.XPlat {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show logs about operations performed by the NuGet protocol, such as HTTP requests..
+        /// </summary>
+        internal static string ListPkg_ShowProtocolLogs {
+            get {
+                return ResourceManager.GetString("ListPkg_ShowProtocolLogs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sources to lookup for latest versions. Works only with `--outdated`..
         /// </summary>
         internal static string ListPkg_SourceDescription {
@@ -1604,15 +1613,6 @@ namespace NuGet.CommandLine.XPlat {
         internal static string Suffix_Description {
             get {
                 return ResourceManager.GetString("Suffix_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The verbosity of logging to use. Allowed values: Debug, Verbose, Information, Minimal, Warning, Error..
-        /// </summary>
-        internal static string Switch_Verbosity {
-            get {
-                return ResourceManager.GetString("Switch_Verbosity", resourceCulture);
             }
         }
         

@@ -18,7 +18,6 @@ namespace NuGet.CommandLine.XPlat
     internal static class XPlatUtility
     {
         public const string HelpOption = "-h|--help";
-        public const string VerbosityOption = "-v|--verbosity <verbosity>";
 
         public static ISettings CreateDefaultSettings()
         {
@@ -26,17 +25,6 @@ namespace NuGet.CommandLine.XPlat
                 Directory.GetCurrentDirectory(),
                 configFileName: null,
                 machineWideSettings: new XPlatMachineWideSetting());
-        }
-
-        public static LogLevel GetLogLevel(CommandOption verbosity)
-        {
-            LogLevel level;
-            if (!Enum.TryParse(value: verbosity.Value(), ignoreCase: true, result: out level))
-            {
-                level = LogLevel.Information;
-            }
-
-            return level;
         }
 
         public static void ConfigureProtocol()
