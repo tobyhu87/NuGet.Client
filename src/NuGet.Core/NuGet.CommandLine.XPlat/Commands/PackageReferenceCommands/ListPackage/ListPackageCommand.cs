@@ -89,7 +89,7 @@ namespace NuGet.CommandLine.XPlat
                     CommandOptionType.NoValue);
 
                 var verbosity = listpkg.Option(
-                    "-v|--verbosity|-verbosity",
+                    "-v|--verbosity",
                     Strings.Verbosity_Description,
                     CommandOptionType.SingleValue);
 

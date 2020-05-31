@@ -4203,10 +4203,10 @@ namespace ClassLibrary
                 .WithProjectName("test")
                 .WithPackageIcon("icon.jpg")
                 .WithPackageIconUrl("http://test.icon")
-                .WithItem("None", "icon.jpg", string.Empty)
-                .WithItem("None", "other\\files.txt", null)
-                .WithItem("None", "folder\\**", "media")
-                .WithItem("None", "utils\\*", "utils");
+                .WithItem("None", "icon.jpg", packagePath: string.Empty, pack: "true")
+                .WithItem("None", "other\\files.txt", packagePath: null, pack: "true")
+                .WithItem("None", "folder\\**", packagePath: "media", pack: "true")
+                .WithItem("None", "utils\\*", packagePath: "utils", pack: "true");
 
             using (var srcDir = testDirBuilder.Build())
             {
@@ -4261,7 +4261,7 @@ namespace ClassLibrary
             projectBuilder
                 .WithProjectName("test")
                 .WithPackageIcon("icon.jpg")
-                .WithItem("None", "icon.jpg", "icon.jpg");
+                .WithItem("None", "icon.jpg", packagePath: "icon.jpg", pack: "true");
 
             using (var srcDir = testDirBuilder.Build())
             {
