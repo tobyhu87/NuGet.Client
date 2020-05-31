@@ -708,7 +708,8 @@ For more information, visit https://docs.nuget.org/docs/reference/command-line-r
   <data name="AddClientCertCommandDescription" xml:space="preserve">
     <value>Adds a client certificate configuration that matches the given package source name.</value>
   </data>
-  <data name="ListPkg_ShowProtocolLogs" xml:space="preserve">
-    <value>Show logs about operations performed by the NuGet protocol, such as HTTP requests.</value>
+  <data name="Verbosity_Description" xml:space="preserve">
+    <value>Set the verbosity level of the command. Allowed values are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</value>
+    <comment>Please don't localize "q[uiet]", "m[inimal]", "n[ormal]", "d[etailed]", or "diag[nostic]"</comment>
   </data>
 </root>

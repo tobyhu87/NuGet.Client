@@ -17,7 +17,10 @@ namespace NuGet.CommandLine.XPlat
 {
     public static class ListPackageCommand
     {
-        public static void Register(CommandLineApplication app, Func<ILogger> getLogger,
+        public static void Register(
+            CommandLineApplication app,
+            Func<ILogger> getLogger,
+            Action<LogLevel> setLogLevel,
             Func<IListPackageCommandRunner> getCommandRunner)
         {
             app.Command("list", listpkg =>
@@ -85,14 +88,35 @@ namespace NuGet.CommandLine.XPlat
                     Strings.NuGetXplatCommand_Interactive,
                     CommandOptionType.NoValue);
 
-                var showProtocolLogs = listpkg.Option(
-                    "--show-protocol-logs",
-                    Strings.ListPkg_ShowProtocolLogs,
-                    CommandOptionType.NoValue);
+                var verbosity = listpkg.Option(
+                    "-v|--verbosity|-verbosity",
+                    Strings.Verbosity_Description,
+                    CommandOptionType.SingleValue);
 
                 listpkg.OnExecute(async () =>
                 {
                     var logger = getLogger();
+
+                    switch (verbosity.Value()?.ToUpperInvariant())
+                    {
+                        case "Q":
+                        case "QUIET":
+                            setLogLevel(LogLevel.Warning);
+                            break;
+                        case "N":
+                        case "NORMAL":
+                            setLogLevel(LogLevel.Information);
+                            break;
+                        case "D":
+                        case "DETAILED":
+                        case "DIAG":
+                        case "DIAGNOSTIC":
+                            setLogLevel(LogLevel.Debug);
+                            break;
+                        default:
+                            setLogLevel(LogLevel.Minimal);
+                            break;
+                    }
 
                     var settings = ProcessConfigFile(config.Value(), path.Value);
                     var sources = source.Values;
@@ -111,7 +135,6 @@ namespace NuGet.CommandLine.XPlat
                         prerelease.HasValue(),
                         highestPatch.HasValue(),
                         highestMinor.HasValue(),
-                        showProtocolLogs.HasValue(),
                         logger,
                         CancellationToken.None);
 

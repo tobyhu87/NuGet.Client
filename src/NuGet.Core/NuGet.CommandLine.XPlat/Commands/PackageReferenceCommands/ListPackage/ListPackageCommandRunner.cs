@@ -616,7 +616,7 @@ namespace NuGet.CommandLine.XPlat
                 includePrerelease: true,
                 includeUnlisted: false,
                 sourceCacheContext: new SourceCacheContext(),
-                log: listPackageArgs.ShowProtocolLogs ? listPackageArgs.Logger : NullLogger.Instance,
+                log: listPackageArgs.Logger,
                 token: listPackageArgs.CancellationToken);
 
             var latestVersionsForPackage = packagesVersionsDict.Where(p => p.Key.Equals(package, StringComparison.OrdinalIgnoreCase)).Single().Value;
@@ -652,7 +652,7 @@ namespace NuGet.CommandLine.XPlat
                 includePrerelease: true,
                 includeUnlisted: true, // Include unlisted because deprecated packages may be unlisted.
                 sourceCacheContext: new SourceCacheContext(),
-                log: listPackageArgs.ShowProtocolLogs ? listPackageArgs.Logger : NullLogger.Instance,
+                log: listPackageArgs.Logger,
                 token: listPackageArgs.CancellationToken);
 
             var resolvedVersionsForPackage = packagesVersionsDict

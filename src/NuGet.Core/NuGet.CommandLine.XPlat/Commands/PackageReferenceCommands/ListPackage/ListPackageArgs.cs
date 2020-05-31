@@ -21,7 +21,6 @@ namespace NuGet.CommandLine.XPlat
         public bool Prerelease { get; }
         public bool HighestPatch { get; }
         public bool HighestMinor { get; }
-        public bool ShowProtocolLogs { get; }
         public CancellationToken CancellationToken { get; }
 
         /// <summary>
@@ -51,51 +50,6 @@ namespace NuGet.CommandLine.XPlat
             bool highestPatch,
             bool highestMinor,
             ILogger logger,
-            CancellationToken cancellationToken) : this(
-                path,
-                packageSources,
-                frameworks,
-                includeOutdated,
-                includeDeprecated,
-                includeTransitive,
-                prerelease,
-                highestPatch,
-                highestMinor,
-                showProtocolLogs: false,
-                logger: logger,
-                cancellationToken: cancellationToken)
-        {
-        }
-
-        /// <summary>
-        /// A constructor for the arguments of list package
-        /// command. This is used to execute the runner's
-        /// method
-        /// </summary>
-        /// <param name="path"> The path to the solution or project file </param>
-        /// <param name="packageSources"> The sources for the packages to check in the case of --outdated </param>
-        /// <param name="frameworks"> The user inputed frameworks to look up for their packages </param>
-        /// <param name="includeOutdated"> Bool for --outdated present </param>
-        /// <param name="includeDeprecated"> Bool for --deprecated present </param>
-        /// <param name="includeTransitive"> Bool for --include-transitive present </param>
-        /// <param name="prerelease"> Bool for --include-prerelease present </param>
-        /// <param name="highestPatch"> Bool for --highest-patch present </param>
-        /// <param name="highestMinor"> Bool for --highest-minor present </param>
-        /// <param name="showProtocolLogs"> Whether or not to show logs from resources (e.g. HTTP start and end requests) </param>
-        /// <param name="logger"></param>
-        /// <param name="cancellationToken"></param>
-        public ListPackageArgs(
-            string path,
-            IEnumerable<PackageSource> packageSources,
-            IEnumerable<string> frameworks,
-            bool includeOutdated,
-            bool includeDeprecated,
-            bool includeTransitive,
-            bool prerelease,
-            bool highestPatch,
-            bool highestMinor,
-            bool showProtocolLogs,
-            ILogger logger,
             CancellationToken cancellationToken)
         {
             Path = path ?? throw new ArgumentNullException(nameof(path));
@@ -107,7 +61,6 @@ namespace NuGet.CommandLine.XPlat
             Prerelease = prerelease;
             HighestPatch = highestPatch;
             HighestMinor = highestMinor;
-            ShowProtocolLogs = showProtocolLogs;
             Logger = logger ?? throw new ArgumentNullException(nameof(logger));
             CancellationToken = cancellationToken;
         }

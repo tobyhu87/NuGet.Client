@@ -844,15 +844,6 @@ namespace NuGet.CommandLine.XPlat {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show logs about operations performed by the NuGet protocol, such as HTTP requests..
-        /// </summary>
-        internal static string ListPkg_ShowProtocolLogs {
-            get {
-                return ResourceManager.GetString("ListPkg_ShowProtocolLogs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Sources to lookup for latest versions. Works only with `--outdated`..
         /// </summary>
         internal static string ListPkg_SourceDescription {
@@ -1676,6 +1667,15 @@ namespace NuGet.CommandLine.XPlat {
         internal static string UpdateSourceCommandDescription {
             get {
                 return ResourceManager.GetString("UpdateSourceCommandDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set the verbosity level of the command. Allowed values are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic]..
+        /// </summary>
+        internal static string Verbosity_Description {
+            get {
+                return ResourceManager.GetString("Verbosity_Description", resourceCulture);
             }
         }
         
