@@ -15,6 +15,7 @@ using NuGet.Credentials;
 using NuGet.Frameworks;
 using NuGet.LibraryModel;
 using NuGet.Packaging;
+using NuGet.Packaging.Core;
 using NuGet.ProjectModel;
 using NuGet.Protocol.Core.Types;
 using NuGet.Versioning;
@@ -100,6 +101,15 @@ namespace NuGet.CommandLine.XPlat
             }
             else
             {
+                // In here...right now we are passing "*", which resolves to altest stavble.
+                // In here we want to pass an exact version that's latest (either stable or prerelease).
+                PackageDependency packageDependencyToUse = packageReferenceArgs.PackageDependency;
+                if (packageReferenceArgs.NoVersion)
+                {
+                    // Go figure out the latest available version. 
+                    var myVersion = await GetLatestVersion(packageReferenceArgs);
+                    packageDependencyToUse = new PackageDependency(packageReferenceArgs.PackageDependency.Id, VersionRange.Parse(myVersion));
+                }
                 // If the user has not specified a framework, then just add it to all frameworks
                 PackageSpecOperations.AddOrUpdateDependency(updatedPackageSpec, packageReferenceArgs.PackageDependency, updatedPackageSpec.TargetFrameworks.Select(e => e.FrameworkName));
             }
@@ -188,6 +198,11 @@ namespace NuGet.CommandLine.XPlat
             await RestoreRunner.CommitAsync(restorePreviewResult, CancellationToken.None);
 
             return 0;
+        }
+
+        private Task<string> GetLatestVersion(PackageReferenceArgs packageReferenceArgs)
+        {
+            return "1.0.0";
         }
 
         private static LibraryDependency GenerateLibraryDependency(
