@@ -1,0 +1,20 @@
+{
+  "$schema": "./devinit.schema.json",
+  "comments": "A dot-devinit file. TODO: add git submodule init & update.",
+  "run": [
+    {
+      "tool": "require-dotnetcoresdk",
+      "comments": "Install .net core sdk base on the repo's global.json.",
+      "additionalOptions":  "\"C:\\Program Files\\dotnet\\\""
+    },
+    {
+      "tool": "require-azureartifactscredentialprovider",
+      "comments": "Install AACP."
+    },
+    {
+      "tool": "dotnet-restore",
+      "comments": "Restores the dependencies and tools of a project using dotnet core. Input can be used to provide .sln path or project file path.",
+      "input": ".\\NuGet.sln"
+    }
+  ]
+}
