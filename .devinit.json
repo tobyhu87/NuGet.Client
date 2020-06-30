@@ -5,7 +5,7 @@
     {
       "tool": "require-dotnetcoresdk",
       "comments": "Install .net core sdk base on the repo's global.json.",
-      "additionalOptions":  "-InstallDir \"C:\\Program Files\\dotnet\\\""
+      "additionalOptions":  "-InstallDir \"C:\\Program Files\\dotnet\""
     },
     {
       "tool": "require-azureartifactscredentialprovider",
