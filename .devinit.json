@@ -15,6 +15,10 @@
       "tool": "dotnet-restore",
       "comments": "Restores the dependencies and tools of a project using dotnet core. Input can be used to provide .sln path or project file path.",
       "input": ".\\NuGet.sln"
+    },
+    {
+      "tool": "require-gitsubmodule",
+      "comments": "Restores the submodules"
     }
   ]
 }
